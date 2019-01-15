@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCIHelloWorld", "OpenCIHelloWorld\OpenCIHelloWorld.csproj", "{578FFFA3-58F1-4ABA-AA71-8189E94EA78B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{DC9A46DA-8FBD-4430-B03C-90FC01750C4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{0EFCF16C-B0ED-4BB9-BD23-D85AADEE5E0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{578FFFA3-58F1-4ABA-AA71-8189E94EA78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{578FFFA3-58F1-4ABA-AA71-8189E94EA78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{578FFFA3-58F1-4ABA-AA71-8189E94EA78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC9A46DA-8FBD-4430-B03C-90FC01750C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9A46DA-8FBD-4430-B03C-90FC01750C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9A46DA-8FBD-4430-B03C-90FC01750C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9A46DA-8FBD-4430-B03C-90FC01750C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EFCF16C-B0ED-4BB9-BD23-D85AADEE5E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EFCF16C-B0ED-4BB9-BD23-D85AADEE5E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EFCF16C-B0ED-4BB9-BD23-D85AADEE5E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EFCF16C-B0ED-4BB9-BD23-D85AADEE5E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
