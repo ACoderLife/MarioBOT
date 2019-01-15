@@ -26,7 +26,11 @@ namespace WindowsForms
 
             
             Image<Rgb, Byte> littleMarioReferenceImage = new Image<Rgb, byte>("LittleMario.bmp");
-            //Image<Rgb, Byte> littleMarioReferenceImage = new Image<Rgb, byte>("AnotherMario.bmp");
+            //Image<Rgb, Byte> littleMarioReferenceImage = new Image<Rgb, byte>("AnotherMario.bmp"); //4k size
+
+            Image<Rgb, Byte> mushroomGuyReferenceImage = new Image<Rgb, byte>("MushroomGuy.bmp");
+
+            Image<Rgb, Byte> brickReferenceImage = new Image<Rgb, byte>("BrickBlock.bmp");
 
             Application.Idle += new EventHandler(delegate (object sender, EventArgs e)
             {  //run this until application closed (close button click on image viewer)
@@ -40,8 +44,13 @@ namespace WindowsForms
 
                 //Next lets find mario!
 
-                viewer.Image = OpenCIHelloWorld.Helpers.TemplateMatcher(source, littleMarioReferenceImage, Color.Red);
+                var marioFoundImage = OpenCIHelloWorld.Helpers.TemplateMatcher(source, littleMarioReferenceImage, Color.Red);
 
+                //Let find enamies
+                var charactersFound = OpenCIHelloWorld.Helpers.TemplateMatcher(marioFoundImage, mushroomGuyReferenceImage, Color.Blue);
+
+                //Let find enamies
+                viewer.Image = OpenCIHelloWorld.Helpers.TemplateMatcher(charactersFound, brickReferenceImage, Color.White);
 
             });
             viewer.ShowDialog(); //show the image viewer

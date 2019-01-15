@@ -32,14 +32,19 @@ namespace OpenCIHelloWorld
             {
                 double[] minValues, maxValues;
                 Point[] minLocations, maxLocations;
+
+
                 result.MinMax(out minValues, out maxValues, out minLocations, out maxLocations);
 
                 // You can try different values of the threshold. I guess somewhere between 0.75 and 0.95 would be good.
-                if (maxValues[0] > 0.4)
+                for (int i = 0; i < maxValues.Length; i++)
                 {
-                    // This is a match. Do something with it, for example draw a rectangle around it.
-                    Rectangle match = new Rectangle(maxLocations[0], template.Size);
-                    imageToShow.Draw(match, new Rgb(matchHighlight), 3);
+                    if (maxValues[i] > 0.4) //Confidence score
+                    {
+                        // This is a match. Do something with it, for example draw a rectangle around it.
+                        Rectangle match = new Rectangle(maxLocations[i], template.Size);
+                        imageToShow.Draw(match, new Rgb(matchHighlight), 3);
+                    }
                 }
             }
 
