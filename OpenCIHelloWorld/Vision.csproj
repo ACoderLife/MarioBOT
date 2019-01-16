@@ -7,8 +7,8 @@
     <ProjectGuid>{578FFFA3-58F1-4ABA-AA71-8189E94EA78B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenCIHelloWorld</RootNamespace>
-    <AssemblyName>OpenCIHelloWorld</AssemblyName>
+    <RootNamespace>Vision</RootNamespace>
+    <AssemblyName>Vision</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

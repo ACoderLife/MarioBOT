@@ -9,7 +9,7 @@ using Emgu.CV.Structure;
 using Emgu.CV.XFeatures2D;
 using Emgu.CV.Util;
 
-namespace OpenCIHelloWorld
+namespace Vision
 {
     public class Helpers
     {
