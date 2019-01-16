@@ -42,15 +42,16 @@ namespace WindowsForms
 
                 var source =  new Emgu.CV.Image<Rgb, Byte>(output); //draw the image obtained from camera
 
+                var imageWithGrid = OpenCIHelloWorld.Helpers.DrawGrid(source);
                 //Next lets find mario!
 
-                var marioFoundImage = OpenCIHelloWorld.Helpers.TemplateMatcher(source, littleMarioReferenceImage, Color.Red);
+                var marioFoundImage = OpenCIHelloWorld.Helpers.MatchBestTemplate(imageWithGrid, littleMarioReferenceImage, Color.Red);
 
                 //Let find enamies
-                var charactersFound = OpenCIHelloWorld.Helpers.TemplateMatcher(marioFoundImage, mushroomGuyReferenceImage, Color.Blue);
+                var charactersFound = OpenCIHelloWorld.Helpers.MatchAllTemplate(marioFoundImage, mushroomGuyReferenceImage, Color.Blue);
 
-                //Let find enamies
-                viewer.Image = OpenCIHelloWorld.Helpers.TemplateMatcher(charactersFound, brickReferenceImage, Color.White);
+                //Let find bricks
+                viewer.Image = OpenCIHelloWorld.Helpers.MatchAllTemplate(charactersFound, brickReferenceImage, Color.Gold);
 
             });
             viewer.ShowDialog(); //show the image viewer
